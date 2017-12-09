@@ -1,6 +1,19 @@
-<h2>UmsaetzeMonthly</h2>
-<md-list>
-  <md-list-item *ngFor="let umsatzmonthly of umsaetzeMonthly"> {{umsatzmonthly.id}} {{umsatzmonthly.monat}}
-    {{umsatzmonthly.einkuenfte}} {{umsatzmonthly.kosten}}
-  </md-list-item>
-</md-list>
+<p-dataList [value]="umsaetzeMonthly">
+  <p-header>
+    UmsaetzeMonthly
+  </p-header>
+  <ng-template let-umsaetzemonthly pTemplate="item">
+    <div class="ui-g-12 ui-md-9 car-details">
+      <div class="ui-g">
+        <div class="ui-g-2 ui-sm-6">Monat:</div>
+        <div class="ui-g-10 ui-sm-6">{{umsaetzemonthly.monat}}</div>
+        <div class="ui-g-2 ui-sm-6">Einkünfte:</div>
+        <div class="ui-g-10 ui-sm-6">{{umsaetzemonthly.einkuenfte}}</div>
+        <div class="ui-g-2 ui-sm-6">Kosten:</div>
+        <div class="ui-g-10 ui-sm-6">{{umsaetzemonthly.kosten}}</div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataList>
+
+<p-chart #monthlyChart type="line" [data]="data"></p-chart>

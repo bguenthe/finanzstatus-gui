@@ -1,0 +1,17 @@
+<p-dataList [value]="vermoegenMonthly">
+  <p-header>
+    VermoegenMonthly
+  </p-header>
+  <ng-template let-vermoegenmonthly pTemplate="item">
+    <div class="ui-g-12 ui-md-9 car-details">
+      <div class="ui-g">
+        <div class="ui-g-2 ui-sm-6">Monat:</div>
+        <div class="ui-g-10 ui-sm-6">{{vermoegenmonthly.monat}}</div>
+        <div class="ui-g-2 ui-sm-6">Vermoegen:</div>
+        <div class="ui-g-10 ui-sm-6">{{vermoegenmonthly.vermoegen}}</div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataList>
+
+<p-chart #vermoegenChart type="line" [data]="data"></p-chart>

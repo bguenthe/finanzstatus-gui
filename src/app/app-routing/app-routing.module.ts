@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import {UmsaetzeMonthlyComponent} from '../umsaetze-monthly/umsaetze-monthly.component';
+import {VermoegenMonthlyComponent} from '../vermoegen-monthly/vermoegen-monthly.component';
 
 const routes: Routes = [
-  { path: 'umsaetzemonthly', component: UmsaetzeMonthlyComponent }
+  { path: 'umsaetze-monthly', component: UmsaetzeMonthlyComponent },
+  { path: 'vermoegen-monthly', component: VermoegenMonthlyComponent }
 ];
 
 @NgModule({
