@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UmsaetzeMonthlyComponent } from './umsaetzemonthly/umsaetzemonthly.component';
@@ -24,7 +24,7 @@ import { ChartModule } from 'primeng/primeng';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatListModule,
     MatTableModule,
@@ -34,6 +34,7 @@ import { ChartModule } from 'primeng/primeng';
   ],
   exports: [
     BrowserAnimationsModule,
+    HttpClientModule,
     MatListModule,
     MatTableModule,
     DataListModule,

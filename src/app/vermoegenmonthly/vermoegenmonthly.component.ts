@@ -25,29 +25,31 @@ export class VermoegenMonthlyComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.vermoegenMonthlyService.getVermoegenMonthly().then(vermoegenMonthly => {
-      this.vermoegenMonthly = vermoegenMonthly;
+    this.vermoegenMonthlyService.getVermoegenMonthly()
+      .subscribe(vermoegenMonthly => {
+          this.vermoegenMonthly = vermoegenMonthly;
 
-      for (const vermoegen of this.vermoegenMonthly) {
-        this.labels.push(vermoegen.monat);
-        this.vermoegen.push(vermoegen.vermoegen);
-      }
-
-      this.data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [
-          {
-            label: 'First Dataset',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            fill: false,
-            borderColor: '#4bc0c0'
+          for (const vermoegen of this.vermoegenMonthly) {
+            this.labels.push(vermoegen.monat);
+            this.vermoegen.push(vermoegen.vermoegen);
           }
-        ]
-      };
 
-      this.data.labels = this.labels;
-      this.data.datasets[0].label = 'Vermoegen';
-      this.data.datasets[0].data = this.vermoegen;
-    });
+          this.data = {
+            labels: null,
+            datasets: [
+              {
+                label: '',
+                data: null,
+                fill: false,
+                borderColor: '#4bc0c0'
+              }
+            ]
+          };
+
+          this.data.labels = this.labels;
+          this.data.datasets[0].label = 'Vermoegen';
+          this.data.datasets[0].data = this.vermoegen;
+        }
+      );
   }
 }

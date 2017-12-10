@@ -5,28 +5,41 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { UmsaetzeMonthly } from './UmsaetzeMonthly';
+import {HttpClient} from "@angular/common/http";
+import {catchError, tap} from "rxjs/operators";
+import {of} from "rxjs/observable/of";
+import {VermoegenMonthly} from "../vermoegenmonthly/VermoegenMonthly";
+import {Observable} from "rxjs/Observable";
 
 
 @Injectable()
 
 export class UmsaetzeMonthlyService {
-
-  constructor(private http: Http) {
-
-  }
-
-
   private umsaetzeMonthlyUrl = '/umsaetzemonthly/all';
 
-  getUmsaetzeMonthly(): Promise<UmsaetzeMonthly[]> {
-    return this.http.get(this.umsaetzeMonthlyUrl)
-      .toPromise()
-      .then(response => response.json() as UmsaetzeMonthly[])
-      .catch(this.handleError);
+  constructor(private http: HttpClient) {
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error);
-    return Promise.reject(error.message || error);
+  getUmsaetzeMonthly(): Observable<UmsaetzeMonthly[]> {
+    return this.http.get<UmsaetzeMonthly[]>(this.umsaetzeMonthlyUrl)
+      .pipe(
+        tap(UmsaetzeMonthly => console.log(`fetched vermoegen`)),
+        catchError(this.handleError('getVermoegenMonthly', []))
+      );
+  }
+
+  /**
+   * Handle Http operation that failed.
+   * Let the app continue.
+   * @param operation - name of the operation that failed
+   * @param result - optional value to return as the observable result
+   */
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+
+      console.error(error); // log to console instead
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
   }
 }
