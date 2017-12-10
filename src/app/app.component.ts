@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import {UmsaetzeMonthlyComponent} from './umsaetze-monthly/umsaetze-monthly.component';
-import {VermoegenMonthlyComponent} from './vermoegen-monthly/vermoegen-monthly.component';
+import {UmsaetzeMonthlyComponent} from './umsaetzemonthly/umsaetzemonthly.component';
+import {VermoegenMonthlyComponent} from './vermoegenmonthly/vermoegenmonthly.component';
 
 @Component({
   selector: 'app-root',

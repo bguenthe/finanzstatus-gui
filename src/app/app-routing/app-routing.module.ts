@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import {UmsaetzeMonthlyComponent} from '../umsaetze-monthly/umsaetze-monthly.component';
-import {VermoegenMonthlyComponent} from '../vermoegen-monthly/vermoegen-monthly.component';
+import {UmsaetzeMonthlyComponent} from '../umsaetzemonthly/umsaetzemonthly.component';
+import {VermoegenMonthlyComponent} from '../vermoegenmonthly/vermoegenmonthly.component';
 
 const routes: Routes = [
-  { path: 'umsaetze-monthly', component: UmsaetzeMonthlyComponent },
-  { path: 'vermoegen-monthly', component: VermoegenMonthlyComponent }
+  { path: 'umsaetzemonthly', component: UmsaetzeMonthlyComponent },
+  { path: 'a', component: UmsaetzeMonthlyComponent },
+  { path: 'vermoegenmonthly', component: VermoegenMonthlyComponent }
 ];
 
 @NgModule({

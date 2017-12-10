@@ -1,10 +1,9 @@
-import { Injectable } from '@angular/core';
-
-import { Headers, Http } from '@angular/http';
+import {Injectable} from '@angular/core';
 
 import 'rxjs/add/operator/toPromise';
 
-import { VermoegenMonthly } from './VermoegenMonthly';
+import {VermoegenMonthly} from './VermoegenMonthly';
+import {Http} from "@angular/http";
 
 
 @Injectable()

@@ -1,12 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {VermoegenMonthly} from '../VermoegenMonthly';
-import {VermoegenMonthlyService} from '../vermoegen-monthly.service';
+import {VermoegenMonthly} from './VermoegenMonthly';
+import {VermoegenMonthlyService} from './vermoegenmonthly.service';
 
 @Component({
-  selector: 'app-vermoegen-monthly',
-  templateUrl: './vermoegen-monthly.component.html',
-  styleUrls: ['./vermoegen-monthly.component.css']
+  selector: 'app-vermoegenmonthly',
+  templateUrl: './vermoegenmonthly.component.html',
+  styleUrls: ['./vermoegenmonthly.component.css']
 })
 export class VermoegenMonthlyComponent implements OnInit {
 
