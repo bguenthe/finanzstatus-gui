@@ -31,3 +31,16 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+# Put to production (Docker)
+Auf einem Raspberry PI (ich habe den 3'er genommen) das raspberry docker image https://blog.hypriot.com/ installieren 
+
+Das dist Verzeichnis auf den Raspberry kopieren (ich habe es in /home/pirate/finanzstaus-gui gelegt
+
+Dockerfile unter `/home/pirate/finanzstaus-gui` anlegen mit Inhalt
+
+`FROM arm32v7/nginx:latest`
+
+`COPY dist /usr/share/nginx/html`
+
+`docker build -t  finanzstaus-gui .`
+`docker run --name finanzstaus-gui -d -p 80:80 finanzstaus-gui`
