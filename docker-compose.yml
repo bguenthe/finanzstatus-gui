@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  gui:
+    container_name: finanzstatus_gui
+    build: .
+    ports:
+      - "80:80"
