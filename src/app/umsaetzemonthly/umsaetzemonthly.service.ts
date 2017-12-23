@@ -15,7 +15,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 
 export class UmsaetzeMonthlyService {
-  private umsaetzeMonthlyUrl = '/umsaetzemonthly/all';
+  private umsaetzeMonthlyUrl = 'http://localhost:8080/umsaetzemonthly/all';
 
   constructor(private http: HttpClient) {
   }
