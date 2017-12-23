@@ -11,7 +11,7 @@ import {of} from "rxjs/observable/of";
 @Injectable()
 
 export class VermoegenMonthlyService {
-  private vermoegenMonthlyUrl = 'http://192.168.178.40:8080/vermoegenmonthly/all';
+  private vermoegenMonthlyUrl = '/vermoegenmonthly/all';
 
   constructor(private http: HttpClient) {
   }
