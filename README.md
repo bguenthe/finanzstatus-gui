@@ -3,10 +3,14 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
 ## Setup
-Run `npm install primeng --save`
-Run `npm install font-awesome --save`
-Run `npm install --save @angular/material @angular/cdk`
-Run `npm install typescript`
+Run `sudo npm install primeng --save`
+Run `sudo npm install font-awesome --save`
+Run `sudo npm install --save @angular/material @angular/cdk`
+Run `sudo npm install typescript`
+
+Run `sudo npm install`
+
+Es gibt aber immer noch Fehler. Ich habe einfach 3 mal npm install aufgerufen, dann war er durch. Was weiß ich!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
