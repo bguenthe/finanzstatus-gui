@@ -16,9 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material';
 import {MatTableModule} from '@angular/material';
 
-import { DataListModule } from 'primeng/primeng';
-
-import { ChartModule } from 'primeng/primeng';
+import { DataListModule } from 'primeng/datalist';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
   imports: [

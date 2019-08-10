@@ -10,7 +10,7 @@ import {UmsaetzeMonthlyService} from './umsaetzemonthly.service';
 })
 export class UmsaetzeMonthlyComponent implements OnInit {
 
-  @ViewChild('monthlyChart')
+  @ViewChild('monthlyChart', {static: false})
   monthlyChart;
 
   umsaetzeMonthly: UmsaetzeMonthly[];

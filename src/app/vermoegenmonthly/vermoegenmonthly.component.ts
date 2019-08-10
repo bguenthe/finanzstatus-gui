@@ -10,7 +10,7 @@ import {VermoegenMonthlyService} from './vermoegenmonthly.service';
 })
 export class VermoegenMonthlyComponent implements OnInit {
 
-  @ViewChild('vermoegenChart')
+  @ViewChild('vermoegenChart', {static: false})
   vermoegenChart;
 
   vermoegenMonthly: VermoegenMonthly[];
